@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB COLOR GENERATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Css Bootstrap -->
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+    
+<header class="hero-header text-center py-4 px-1">
+    <h3>Generate Color</h3>
+    <h1 id="colorName">Random RGB Color</h1>
+    <!-- <h3>You Desire</h3> -->
+</header>
+
+<nav class="navigation">
+    <div class="navContainer">
+        <button class="colorType selected solid" id="solid">Single Colors</button>
+        <button class="refresh">Refresh</button>
+        <button class="colorType gradient" id="gradient">Gradient Colors</button>
+    </div>
+</nav>
+
+<main>
+    <section class="colorDisplay">
+        <div class="buttonContainer">
+            <span class="copyLink">Copy RGB code</span>
+            <button class="generatBtn navBtn">
+                <span href="" class="navBtn-link">Generate Color</span>
+            </button>
+        </div>
+    </section>
+</main>
+
+<div class="container">
+    <p id="textToCopy">This is the text to copy.</p>
+    <button onclick="copyToClipboard()">Copy Text</button>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

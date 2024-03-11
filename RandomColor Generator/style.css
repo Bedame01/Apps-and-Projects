@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope' !important;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url(Font/Manrope-Light.ttf) format('woff2');
+    src: url(Font/Manrope-Light.ttf) format('woff');
+    src: url(Font/Manrope-Light.ttf) format('truetype');
+    font-style: normal;
+}
+:root{
+    --primary-color:rgb(255, 255, 255);
+    --secondary-color: #1d6a9d;
+}
+
+.hero-header{
+    color: rgb(15, 6, 6);
+}
+
+#colorName{
+    font-size: 230%;
+}
+
+.navigation{
+    width: 100%;
+    background-color: var(--primary-color);
+}
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.colorType, .refresh{
+    outline: none;
+    border: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: transparent !important;
+    border-radius: 10px 10px 0 0;
+    transition: all .4s ease;
+}
+
+.colorType:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color) !important;
+}
+.selected{
+    color: var(--primary-color);
+    background-color: var(--secondary-color) !important;
+}
+
+.colorDisplay{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 80vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BUTTON */
+.navBtn{
+    --button_radius: 0.75em;
+    --button_color: var(--primary-color);
+    --button_outline_color: #424242;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    width: 100%;
+    max-width: 300px;
+    font-size: 14px;
+    font-weight: 700;
+    user-select: none;
+}
+.navBtn-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 15px 10px;
+    background: var(--primary-color);
+    color: black;
+    transform: translateY(-0.2em);
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.navBtn:hover .navBtn-link{
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+.navBtn:active .navBtn-link{
+      /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+.buttonContainer{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.buttonContainer .copyLink{
+    visibility: hidden;
+    width: 130px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -65px;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.buttonContainer .copyLink::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.copyLink:hover{
+    transform: scale(1.1);
+}
+
+.textToCopy{
+    color: white !important;
+}

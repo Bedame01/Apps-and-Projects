@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans' !important;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+:root{
+    --bgDark: rgb(8, 1, 8);
+    --bgLight: rgb(255, 255, 255);
+    --primaryColor: rgb(0, 101, 173);
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(./Font/OpenSans-Regular.ttf) format(ttf);
+    src: url(./Font/OpenSans-Regular.ttf) format(woff);
+    src: url(./Font/OpenSans-Regular.ttf) format(woff2);
+}
+
+body{
+    background-color: var(--bgDark) !important;
+    color: var(--bgLight) !important;
+}
+
+header{
+    background-color: var(--primaryColor);
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    text-transform: uppercase !important;
+}
+
+header h3{
+    font-size: 7vw;
+}
+
+header h1{
+    font-size: 4vw;
+}
+
+.squareContainer{
+    width: 100%;
+    /* background-color: aquamarine; */
+    max-width: 600px !important;
+    margin: 30px auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.square{
+    width: 28%;
+    padding-bottom: 28%;
+    border-radius: 17%;
+    transition: all 0.3s ease;
+    margin: 10px;
+    cursor: pointer;
+    background-color: yellowgreen;
+}
+
+.accessContainer{
+    background-color: var(--bgLight);
+    color: var(--primaryColor);
+    width: 100%;
+}
+.accessContainerMax{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center; 
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+}
+.accessContainer .redo, .easy, .hard{
+    cursor: pointer;
+    padding: 3px 8px;
+    transition: all .3s ease;
+}
+.easy, .hard{
+    padding: 3px 15px;
+}
+
+.level{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.easy:hover, .hard:hover{
+    background-color: var(--primaryColor);
+    color: var(--bgLight);
+}
+
+.selected{
+    background-color: var(--primaryColor);
+    color: var(--bgLight);
+}
+
+/* TRY AGAIN SHAKE EFFECT */
+.message.shake{
+    animation: justshake 0.3s forwards;
+    color: red;
+}
+@keyframes justshake{
+    25% {transform: translateX(5px);}
+    50% {transform: translateX(-5px);}
+    75% {transform: translateX(5px);}
+    100% {transform: translateX-(5px);}
+}
+
+
+/* RESPONSIVENESS TABLET VIEW */
+@media screen and (min-width: 700px) {
+    header h3{
+        font-size: 300% !important;
+    }
+    
+    header h1{
+        font-size: 24px !important;
+    }
+}
+/* RESPONSIVENESS MOBILE VIEW */
+@media screen and (max-width: 500px) {
+    .accessContainerMax{
+        font-size: 3vw !important;
+    }
+}
